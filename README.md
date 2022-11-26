@@ -9,5 +9,11 @@
  languages/zh-TW.yml
 
 3. 使用 Alicdn 加载 Polyfill
+ layout/_partials/layout.njk
 
+4. 添加对 Google analytics 4 的支持
+ layout/_partials/layout.njk
+ layout/_partials/third-party/google-analytics.njk
+ layout/_partials/third-party/google-tag-body.njk
+ layout/_partials/third-party/google-tag-head.njk
 ## Usage
