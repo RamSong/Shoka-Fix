@@ -131,7 +131,7 @@ widgets:
   # if true, will show random posts
   random_posts: true
   # if true, will show recent comments
-  recent_comments: true
+  recent_comments: false
 
 footer:
   # Specify the date when the site was setup. If not defined, current year will be used.
