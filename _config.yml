@@ -85,7 +85,7 @@ font:
     family: Inconsolata
 
 # project of https://www.iconfont.cn/
-# //at.alicdn.com/t/font_1832207_c8i9n1ulxlt.css => 1832207_c8i9n1ulxlt
+#  //at.alicdn.com/t/font_1832207_c8i9n1ulxlt.css => 1832207_c8i9n1ulxlt
 iconfont: "1832207_15qncu9y48e"
 
 menu:
