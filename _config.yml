@@ -181,37 +181,25 @@ creative_commons:
   language: deed.zh
 
 # Comments
-# Valine
-# For more information: https://github.com/amehime/MiniValine
-valine:
-  appId: #Your_appId
-  appKey: #Your_appkey
-  placeholder: ヽ(○´∀`)ﾉ♪ # Comment box placeholder
-  avatar: mp # Gravatar style : mp, identicon, monsterid, wavatar, robohash, retro
-  pageSize: 10 # Pagination size
-  lang: en
-  visitor: true # Article reading statistic
-  NoRecordIP: false # Whether to record the commenter IP
-  serverURLs: # When the custom domain name is enabled, fill it in here (it will be detected automatically by default, no need to fill in)
-  powerMode: true
-  tagMeta:
-    visitor: 新朋友
-    master: 主人
-    friend: 小伙伴
-    investor: 金主粑粑
-  tagColor:
-    master: "var(--color-orange)"
-    friend: "var(--color-aqua)"
-    investor: "var(--color-pink)"
-  tagMember:
-    master:
-      # - hash of master@email.com
-      # - hash of master2@email.com
-    friend:
-      # - hash of friend@email.com
-      # - hash of friend2@email.com
-    investor:
-      # - hash of investor1@email.com
+# Waline
+# For more information: https://waline.js.org/
+waline:
+  serverURL: https://xxxxxxx.vercel.app/    # 填入刚刚得到的后端 URL（必填）
+  visitor: true   # 文章访问量统计
+  lang: zh-CN     # 语言，默认 zh-CN
+  login: enable   # 登录模式状态，默认值 enable，force 可以强制登录
+  wordLimit: 0    # 评论字数限制，0 为不限制，默认值为 0
+  pageSize: 10    # 评论列表分页，数字为条数，默认值 10
+  highlight: true # 代码高亮，默认 true
+  meta: ['nick', 'mail', 'link'] # 评论者相关属性，默认 ['nick', 'mail', 'link']
+  requiredMeta: ['nick', 'mail'] #设置评论者属性必填项，默认 []（即匿名）
+  placeholder: '捧ぐる祈りの光~★' # 评论框占位提示符，默认 ' 欢迎评论'
+  copyright: false # 是否显示页脚版权信息
+  emoji: [
+    'https://jsdone.ramsong.cn/gh/walinejs/emojis@1.0.0/tw-emoji',
+    'https://jsdone.ramsong.cn/gh/norevi/waline-blobcatemojis@1.0/blobs',
+    'https://jsdone.ramsong.cn/gh/walinejs/emojis@1.0.0/bilibili',
+  ] # 自定义表情包
 
 # bgm
 audio:
@@ -296,6 +284,7 @@ vendors:
     comment: css/comment.css
     fancybox: combine/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css,npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css
   js:
+    waline: npm/@waline/client/dist/Waline.min.js
     pace: npm/pace-js@1.0.2/pace.min.js
     pjax: npm/pjax@0.2.8/pjax.min.js
     fetch: npm/whatwg-fetch@3.4.0/dist/fetch.umd.min.js

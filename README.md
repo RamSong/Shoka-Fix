@@ -2,7 +2,7 @@
 
 ## Fix
 
-1. 修复 Iconfont CDN 链接格式变动导致的无法正常获取图标的BUG
+1. 修复 Iconfont CDN 链接格式变动导致的无法正常获取图标的BUG且更换图标库
  source/css/_common/scaffolding/base.styl
  
 2. 修正错误的用词
@@ -20,5 +20,10 @@
 5. 默认 Iconfont图标库 替换为 1832207_15qncu9y48e
  _config.yml
  
-6. 
+6. 更换 cdn.jsdelivr.net 为我自己反代并用 Gcore Cdn 加速的节点 jsdone.ramsong.cn
+ scripts/helpers/asset.js
+ source/js/_app/utils.js
+
+7. 把 Valine 换成更安全的评论系统 Waline
+
 ## Usage

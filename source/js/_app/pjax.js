@@ -55,21 +55,24 @@ const siteRefresh = function (reload) {
   vendorJs('copy_tex');
   vendorCss('mermaid');
   vendorJs('chart');
-  vendorJs('valine', function() {
-    var options = Object.assign({}, CONFIG.valine);
-    options = Object.assign(options, LOCAL.valine||{});
-    options.el = '#comments';
-    options.pathname = LOCAL.path;
-    options.pjax = pjax;
-    options.lazyload = lazyload;
+  
+  if(CONFIG.waline.serverURL) {
+    vendorJs('waline', function() {
+      var options = Object.assign({}, CONFIG.waline);
+      options = Object.assign(options, LOCAL.waline||{});
+      options.el = '#comments';
+      options.pathname = LOCAL.path;
+      options.pjax = pjax;
+      options.lazyload = lazyload;
 
-    new MiniValine(options);
+      new Waline(options);
 
-    setTimeout(function(){
-      positionInit(1);
-      postFancybox('.v');
-    }, 1000);
-  }, window.MiniValine);
+      setTimeout(function(){
+        positionInit(1);
+        postFancybox('.waline-container');
+      }, 1000);
+    }, window.Waline);
+  }
 
   if(!reload) {
     $.each('script[data-pjax]', pjaxScript);
