@@ -16,4 +16,9 @@
  layout/_partials/third-party/google-analytics.njk
  layout/_partials/third-party/google-tag-body.njk
  layout/_partials/third-party/google-tag-head.njk
+ 
+5. 默认 Iconfont图标库 替换为 1832207_15qncu9y48e
+ _config.yml
+ 
+6. 
 ## Usage
