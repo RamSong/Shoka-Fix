@@ -1,3 +1,6 @@
+# 有处出错了 整个框架就崩了 我有空再修
+
+
 # Hexo Theme Shoka Fix
 
 ## Fix
