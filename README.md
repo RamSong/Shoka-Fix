@@ -1,4 +1,4 @@
-# 有处出错了 hexo -d都都出错 有空再修
+# 有处没改好 hexo -d都都出错 有空再修
 
 
 # Hexo Theme Shoka Fix
